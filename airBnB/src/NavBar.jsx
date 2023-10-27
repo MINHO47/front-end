@@ -9,12 +9,12 @@ export default function NavBar(){
         <>
         <div className="nav-bar">
         <h1>AIRBNB</h1>        
-        <img className="nav-logo" src={bnb} alt="airbnb logo"/>
+        <Link to="/"><img className="nav-logo" src={bnb} alt="airbnb logo"/></Link>
         </div>
         <nav>
          <ul>
           <li>
-           <Link to="/">Home</Link>
+           <Link to="/login">Login</Link>
           </li>
           <li>
            <Link to="/about">About</Link>
