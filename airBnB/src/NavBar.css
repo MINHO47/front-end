@@ -1,0 +1,14 @@
+/* NavBar.css */
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF ;
+    padding: 1px;
+  }
+  
+  .nav-logo {
+    width: 80px;
+    height: auto;
+  }
+  
