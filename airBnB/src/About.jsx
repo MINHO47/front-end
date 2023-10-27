@@ -36,7 +36,7 @@ function About() {
             <Card.Body>
               <Card.Title>Legal and Privacy</Card.Title>
               <Card.Text>
-                View our <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.
+                View our Terms of Service and Privacy Policy.
               </Card.Text>
             </Card.Body>
           </Card>
