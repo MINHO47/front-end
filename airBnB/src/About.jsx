@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 
-function About() {
+export default function About() {
   return (
     <Container className="mt-4">
       <Row>
@@ -29,9 +29,6 @@ function About() {
               </Card.Text>
             </Card.Body>
           </Card>
-
-          {/* Add additional sections as needed */}
-
           <Card className="mt-4">
             <Card.Body>
               <Card.Title>Legal and Privacy</Card.Title>
@@ -44,6 +41,4 @@ function About() {
       </Row>
     </Container>
   );
-}
-
-export default About;
+};

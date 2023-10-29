@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 
-function LoginPage() {
+export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -49,5 +49,5 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+
 
