@@ -1,5 +1,6 @@
 import React from "react";
 import phoneIcon from "./assets/telepon-7735.png";
+import { Link } from "react-router-dom";
 
 export default function Contact(props) {
   return (
@@ -36,6 +37,9 @@ export default function Contact(props) {
               <em>{props.price}</em>
             </b>
           </p>
+          <Link to={`/${props.id}`}>
+            <button className=" btn-lg">See More</button>
+          </Link>
         </div>
       </div>
     </>
