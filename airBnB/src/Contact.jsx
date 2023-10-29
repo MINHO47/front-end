@@ -37,7 +37,7 @@ export default function Contact(props) {
               <em>{props.price}</em>
             </b>
           </p>
-          <Link to={`/${props.id}`}>
+          <Link target="_blank" to={`/${props.id}`}>
             <button className=" btn-lg">See More</button>
           </Link>
         </div>
