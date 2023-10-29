@@ -17,7 +17,7 @@ export default function HomePage() {
       number: "(555) 123-4567",
       price: "$1200",
       desc: "This celestial hideaway is a night sky enthusiast's dream. As darkness falls, the world's grandest spectacle unfolds above you. Step out onto the expansive deck and witness a canvas of stars, constellations, and the Milky Way stretching endlessly across the night sky.",
-      linkUrl: "",
+      id: "",
     },
     {
       img: image2,
@@ -25,7 +25,7 @@ export default function HomePage() {
       number: "(555) 987-6543",
       price: "$1500",
       desc: "A charming beachfront bungalow, featuring a spacious deck overlooking the ocean, where you can enjoy breathtaking sunsets and the sound of crashing waves.",
-      linkUrl: "",
+      id: "",
     },
     {
       img: image3,
@@ -33,7 +33,7 @@ export default function HomePage() {
       number: "(555) 789-1234",
       price: "$1800",
       desc: "An elegant Victorian-era mansion with a grand staircase, stained glass windows, and a beautifully landscaped garden, perfect for hosting lavish garden parties.",
-      linkUrl: "",
+      id: "",
     },
     {
       img: image4,
@@ -41,7 +41,7 @@ export default function HomePage() {
       number: "(555) 234-5678",
       price: "$2500",
       desc: "A Southwestern adobe home with terracotta tiles, arched doorways, and a private courtyard, offering a taste of the American Southwest's architectural charm.",
-      linkUrl: "",
+      id: "",
     },
     {
       img: image5,
@@ -49,7 +49,7 @@ export default function HomePage() {
       number: "(555) 876-5432",
       price: "$3000",
       desc: "Nestled along the tranquil shores of a pristine lake, this lakeside retreat offers the epitome of tranquility. Wake up to the soft ripples of the water and enjoy your morning coffee on the private dock.",
-      linkUrl: "",
+      id: "",
     },
     {
       img: image6,
@@ -57,7 +57,7 @@ export default function HomePage() {
       number: "(555) 345-6789",
       price: "$1700",
       desc: "A cozy cottage nestled in the heart of a picturesque forest, with a stone fireplace and a large bay window that offers stunning views of the surrounding woods.",
-      linkUrl: "",
+      id: "",
     },
     {
       img: image7,
@@ -65,7 +65,7 @@ export default function HomePage() {
       number: "(555) 432-1098",
       price: "$700",
       desc: "A modern, minimalist townhouse with sleek lines, large windows, and an open-concept design, offering a stylish and functional urban living space.",
-      linkUrl: "",
+      id: "",
     },
     {
       img: image8,
@@ -73,7 +73,7 @@ export default function HomePage() {
       number: "(555) 210-9876",
       price: "$1600",
       desc: "A futuristic smart home with automated features, including voice-controlled lighting, climate control, and security systems, making daily life highly efficient and comfortable.",
-      linkUrl: "",
+      id: "",
     },
   ];
 
