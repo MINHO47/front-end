@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 import Login from "./Login";
 import About from "./About";
 import Home from "./Home";
@@ -14,9 +15,15 @@ import SixHome from "./houses/SixHome";
 import SevenHome from "./houses/SevenHome";
 import EightHome from "./houses/EightHome";
 
+const AppStyle = {
+  minHeight: "100vh",
+  display: "flex",
+  flexDirection: "column",
+};
+
 export default function App() {
   return (
-    <>
+    <div style={AppStyle}>
       <Router>
         <NavBar />
         <Routes>
@@ -33,6 +40,7 @@ export default function App() {
           <Route path="/08" element={<EightHome />} />
         </Routes>
       </Router>
-    </>
+      <Footer />
+    </div>
   );
 }
