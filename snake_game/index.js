@@ -15,6 +15,10 @@ let appleY;
 
 let gameOver = false;
 
+function refreshGame() {
+  location.reload();
+}
+
 window.onload = function () {
   board = document.getElementById("board");
   board.height = rows * blockSize;
@@ -61,12 +65,14 @@ function Update() {
     snakeY >= rows * blockSize
   ) {
     gameOver = true;
-    alert("GAME OVER!");
+    alert("GAME OVER PUPSIK!");
+    refreshGame();
   }
   for (let i = 1; i < Body.length; i++) {
     if (snakeX === Body[i][0] && snakeY === Body[i][1]) {
       gameOver = true;
-      alert("GAME OVER!");
+      alert("GAME OVER PUPSIK!");
+      refreshGame();
     }
   }
 }
