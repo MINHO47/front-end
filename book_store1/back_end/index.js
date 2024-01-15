@@ -12,7 +12,7 @@ const mongoDBURL =
 
 app.get("/", (request, response) => {
   console.log(request);
-  return response.status(562).send("auf ia vor pidari bliaaa");
+  return response.status(200).send("auf ia vor pidari bliaaa");
 });
 
 app.post("/books", async (request, response) => {
