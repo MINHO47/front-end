@@ -1,4 +1,4 @@
-import express, { request } from "express";
+import express, { request, response } from "express";
 import mongoose from "mongoose";
 import Book from "./models/bookmodels.js";
 
@@ -33,6 +33,16 @@ app.post("/books", async (request, response) => {
     };
     const book = await Book.create(newBook);
     return response.status(201).send(book);
+  } catch (error) {
+    console.log(error.message);
+    response.status(500).send({ message: error.message });
+  }
+});
+
+app.get("/books", async (request, response) => {
+  try {
+    const books = await Book.find({});
+    return response.status(200).json(books);
   } catch (error) {
     console.log(error.message);
     response.status(500).send({ message: error.message });
