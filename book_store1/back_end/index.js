@@ -1,12 +1,13 @@
 import express, { request, response } from "express";
 import mongoose from "mongoose";
-import Book from "./models/bookmodels.js";
 import booksRoute from "./Routes/booksRoute.js";
+import cors from "cors";
 
 const PORT = 5555;
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 const mongoDBURL =
   "mongodb+srv://elgato:elgatito2020@newprojektumanusum2002.eoc9hzi.mongodb.net/?retryWrites=true&w=majority";
