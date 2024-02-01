@@ -27,6 +27,7 @@ const Home = () => {
       <div className="flex justify-between items-center">
         <h1 className="text-3x1 my-8">Books we have :)</h1>
         <Link to="/books/create">
+          add ur book here
           <MdOutlineAddBox className="text-sky-800 text-4-1" />
         </Link>
       </div>
@@ -36,7 +37,7 @@ const Home = () => {
         <table className="w-full border-separate border-spacing-2">
           <thead>
             <tr>
-              <th className="border border-slate-600 rounded-md">No</th>
+              <th className="border border-slate-600 rounded-md">#</th>
               <th className="border border-slate-600 rounded-md">title</th>
               <th className="border border-slate-600 rounded-md max-md:hidden">
                 author
