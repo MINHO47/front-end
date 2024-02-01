@@ -9,6 +9,7 @@ import { BsInfoCircle } from "react-icons/bs";
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     setLoading(true);
     axios
@@ -22,13 +23,17 @@ const Home = () => {
         setLoading(false);
       });
   }, []);
+
   return (
     <div className="p-4">
       <div className="flex justify-between items-center">
-        <h1 className="text-3x1 my-8">Books we have :)</h1>
-        <Link to="/books/create">
-          add ur book here
-          <MdOutlineAddBox className="text-sky-800 text-4-1" />
+        <h1 className="text-3xl my-8">Books we have :)</h1>
+        <Link
+          to="/books/create"
+          className="bg-sky-800 text-white px-4 py-1 rounded-lg"
+        >
+          Add your book here
+          <MdOutlineAddBox className="text-4xl ml-2" />
         </Link>
       </div>
       {loading ? (
@@ -38,14 +43,14 @@ const Home = () => {
           <thead>
             <tr>
               <th className="border border-slate-600 rounded-md">#</th>
-              <th className="border border-slate-600 rounded-md">title</th>
+              <th className="border border-slate-600 rounded-md">Title</th>
               <th className="border border-slate-600 rounded-md max-md:hidden">
-                author
+                Author
               </th>
               <th className="border border-slate-600 rounded-md max-md:hidden">
-                publisheYear
+                Publish Year
               </th>
-              <th className="border border-slate-600 rounded-md">operation</th>
+              <th className="border border-slate-600 rounded-md">Operation</th>
             </tr>
           </thead>
           <tbody>
@@ -66,13 +71,13 @@ const Home = () => {
                 <td className="border border-slate-700 rounded-md text-center ">
                   <div className="flex justify-center gap-x-4">
                     <Link to={`/books/details/${book._id}`}>
-                      <BsInfoCircle className="text-2x1 text-green-800" />
+                      <BsInfoCircle className="text-2xl text-green-800" />
                     </Link>
                     <Link to={`/books/edit/${book._id}`}>
-                      <AiOutlineEdit className="text-2x1 text-yellow-600" />
+                      <AiOutlineEdit className="text-2xl text-yellow-600" />
                     </Link>
                     <Link to={`/books/delete/${book._id}`}>
-                      <MdOutlineDelete className="text-2x1 text-red-600" />
+                      <MdOutlineDelete className="text-2xl text-red-600" />
                     </Link>
                   </div>
                 </td>
