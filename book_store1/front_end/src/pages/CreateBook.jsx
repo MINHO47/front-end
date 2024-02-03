@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const CreateBook = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
-  const [publisheYear, setPublisheYear] = useState(""); // Keeping the original variable name
+  const [publisheYear, setPublisheYear] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ const CreateBook = () => {
     const data = {
       title,
       author,
-      publisheYear, // Keeping the original variable name
+      publisheYear,
     };
     setLoading(true);
     axios
