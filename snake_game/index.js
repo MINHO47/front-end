@@ -78,16 +78,16 @@ function Update() {
 }
 
 function ChangeDirections(e) {
-  if (e.code === "ArrowUp" && moveY !== 1) {
+  if ((e.code === "ArrowUp" || e.key === "w") && moveY !== 1) {
     moveX = 0;
     moveY = -1;
-  } else if (e.code === "ArrowDown" && moveY !== -1) {
+  } else if ((e.code === "ArrowDown" || e.key === "s") && moveY !== -1) {
     moveX = 0;
     moveY = 1;
-  } else if (e.code === "ArrowLeft" && moveX !== 1) {
+  } else if ((e.code === "ArrowLeft" || e.key === "a") && moveX !== 1) {
     moveX = -1;
     moveY = 0;
-  } else if (e.code === "ArrowRight" && moveX !== -1) {
+  } else if ((e.code === "ArrowRight" || e.key === "d") && moveX !== -1) {
     moveX = 1;
     moveY = 0;
   }
