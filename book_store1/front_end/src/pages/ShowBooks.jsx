@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom";
 import BackButt from "../Components/BackButt";
 import Spinner from "../Components/Spinner";
 
-// ... (other imports)
-
 const ShowBooks = () => {
   const [book, setBook] = useState({});
   const [loading, setLoading] = useState(false);

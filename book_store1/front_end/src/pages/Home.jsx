@@ -42,7 +42,7 @@ const Home = () => {
         </button>
       </div>
       <div className="flex justify-between items-center my-4">
-        <h1 className="text-3xl">Books we have :)</h1>
+        <h1 className="text-3xl">Your personal booklist :)</h1>
         <Link
           to="/books/create"
           className="bg-red-300 text-white px-4 py-2 rounded-lg flex items-center "
