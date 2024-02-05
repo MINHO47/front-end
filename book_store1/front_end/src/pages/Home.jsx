@@ -9,7 +9,7 @@ import BooksTable from "../Components/home/BooksTable";
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [showType, setShowType] = useState("table");
+  const [showType, setShowType] = useState("card");
 
   useEffect(() => {
     setLoading(true);
@@ -30,15 +30,15 @@ const Home = () => {
       <div className="flex justify-center items-center gap-x-4 my-4">
         <button
           className="bg-red-300 hover:bg-sky-600 px-4 py-2 rounded-lg"
-          onClick={() => setShowType("table")}
-        >
-          Table View
-        </button>
-        <button
-          className="bg-red-300 hover:bg-sky-600 px-4 py-2 rounded-lg"
           onClick={() => setShowType("card")}
         >
           Card View
+        </button>
+        <button
+          className="bg-red-300 hover:bg-sky-600 px-4 py-2 rounded-lg"
+          onClick={() => setShowType("table")}
+        >
+          Table View
         </button>
       </div>
       <div className="flex justify-between items-center my-4">
