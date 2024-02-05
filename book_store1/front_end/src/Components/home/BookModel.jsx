@@ -29,8 +29,8 @@ const BookModel = ({ book, onClose }) => {
           <BiUserCircle className="text-red-300 text-2xl" />
           <h2 className="my-1">{book.author}</h2>
         </div>
-        <p className="mt-4">I love KFC</p>
-        <p className="my-2">Yes</p>
+        <p className="mt-4 flex justify-center items-center">do I love KFC?</p>
+        <p className="my-2">Yes.</p>
       </div>
     </div>
   );
