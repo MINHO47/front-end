@@ -46,7 +46,7 @@ const Home = () => {
       </div>
       <Link
         to="/books/create"
-        className="bg-red-300 text-white px-2 py-4 rounded-lg flex justify-center items-center"
+        className="bg-red-300 text-white px-2 py-2 rounded-lg flex justify-center items-center"
       >
         <MdOutlineAddBox className="text-4xl ml-2" />
       </Link>
