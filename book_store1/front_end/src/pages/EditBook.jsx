@@ -11,6 +11,7 @@ const EditBook = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
+
   useEffect(() => {
     setLoading(true);
     axios
@@ -23,10 +24,12 @@ const EditBook = () => {
       })
       .catch((error) => {
         setLoading(false);
-        alert("vai mliaaaerrorr pupsik!!");
+        alert(
+          "An error occurred while fetching book details. Please try again."
+        );
         console.log(error);
       });
-  }, []);
+  }, [id]);
 
   const handleEditBook = () => {
     const data = {
@@ -43,7 +46,7 @@ const EditBook = () => {
       })
       .catch((error) => {
         setLoading(false);
-        alert("Something went wrong!");
+        alert("An error occurred while editing the book. Please try again.");
         console.log(error);
       });
   };
@@ -51,38 +54,38 @@ const EditBook = () => {
   return (
     <div className="p-4">
       <BackButt />
-      <h1 className="text-3x1 my-4">Edit Book</h1>
-      {loading ? <Spinner /> : ""}
-      <div className="flex flex-col border-2 border-sky-400 rounded-x1 w-[600px] p-4 mx-auto ">
+      <h1 className="text-3xl my-4">Edit Book</h1>
+      <div className="flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto">
+        {loading && <Spinner />}
         <div className="my-4">
-          <label className="text-x1 mr-4 text-gray-500">Title</label>
+          <label className="text-xl mr-4 text-gray-500">Title</label>
           <input
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="border-2 border-gray-500 px-4 py-2 w-full"
+            className="border-2 rounded-xl border-gray-500 px-4 py-2 w-full"
           />
         </div>
         <div className="my-4">
-          <label className="text-x1 mr-4 text-gray-500">Author</label>
+          <label className="text-xl mr-4 text-gray-500">Author</label>
           <input
             type="text"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
-            className="border-2 border-gray-500 px-4 py-2 w-full"
+            className="border-2 rounded-xl border-gray-500 px-4 py-2 w-full"
           />
         </div>
         <div className="my-4">
-          <label className="text-x1 mr-4 text-gray-500">Publish Year</label>
+          <label className="text-xl mr-4 text-gray-500">Publish Year</label>
           <input
             type="number"
             value={publisheYear}
             onChange={(e) => setPublisheYear(e.target.value)}
-            className="border-2 border-gray-500 px-4 py-2 w-full"
+            className="border-2 rounded-xl border-gray-500 px-4 py-2 w-full"
           />
         </div>
         <button className="p-2 bg-sky-300 m-8" onClick={handleEditBook}>
-          Save new book
+          Save edited book
         </button>
       </div>
     </div>

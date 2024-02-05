@@ -27,37 +27,37 @@ const Home = () => {
 
   return (
     <div className="p-4">
-      <div className=" flex justify-center items-center gap-x-4">
+      <div className="flex justify-center items-center gap-x-4 my-4">
         <button
-          className="bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg"
+          className="bg-sky-300 hover:bg-sky-600 px-4 py-2 rounded-lg"
           onClick={() => setShowType("table")}
         >
-          Tabble
+          Table View
         </button>
         <button
-          className="bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg"
+          className="bg-sky-300 hover:bg-sky-600 px-4 py-2 rounded-lg"
           onClick={() => setShowType("card")}
         >
-          Card
+          Card View
         </button>
       </div>
-      <div className="flex justify-between items-center">
-        <h1 className="text-3xl my-8">Books we have :)</h1>
+      <div className="flex justify-between items-center my-4">
+        <h1 className="text-3xl">Books we have :)</h1>
         <Link
           to="/books/create"
-          className="bg-sky-800 text-white px-4 py-1 rounded-lg"
+          className="bg-sky-800 text-white px-4 py-2 rounded-lg flex items-center"
         >
           Add your book here
           <MdOutlineAddBox className="text-4xl ml-2" />
         </Link>
       </div>
-      {loading ? (
-        <Spinner />
-      ) : showType === "table" ? (
-        <BooksTable books={books} />
-      ) : (
-        <BooksCard books={books} />
+      {loading && (
+        <div className="flex justify-center items-center my-8">
+          <Spinner />
+        </div>
       )}
+      {!loading && showType === "table" && <BooksTable books={books} />}
+      {!loading && showType === "card" && <BooksCard books={books} />}
     </div>
   );
 };
