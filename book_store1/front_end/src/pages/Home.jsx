@@ -29,13 +29,13 @@ const Home = () => {
     <div className="p-4">
       <div className="flex justify-center items-center gap-x-4 my-4">
         <button
-          className="bg-sky-300 hover:bg-sky-600 px-4 py-2 rounded-lg"
+          className="bg-red-300 hover:bg-sky-600 px-4 py-2 rounded-lg"
           onClick={() => setShowType("table")}
         >
           Table View
         </button>
         <button
-          className="bg-sky-300 hover:bg-sky-600 px-4 py-2 rounded-lg"
+          className="bg-red-300 hover:bg-sky-600 px-4 py-2 rounded-lg"
           onClick={() => setShowType("card")}
         >
           Card View
@@ -45,7 +45,7 @@ const Home = () => {
         <h1 className="text-3xl">Books we have :)</h1>
         <Link
           to="/books/create"
-          className="bg-sky-800 text-white px-4 py-2 rounded-lg flex items-center"
+          className="bg-red-300 text-white px-4 py-2 rounded-lg flex items-center "
         >
           Add your book here
           <MdOutlineAddBox className="text-4xl ml-2" />

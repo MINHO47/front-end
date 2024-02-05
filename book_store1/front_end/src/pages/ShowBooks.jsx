@@ -41,7 +41,7 @@ const ShowBooks = () => {
 
   return (
     <div className="flex items-center justify-center h-full">
-      <div className="p-4 bg-white border-2 border-sky-400 rounded-xl">
+      <div className="p-4 bg-white border-2 border-red-300 rounded-xl">
         <BackButt />
         <h1 className="text-3xl my-4">Your Chosen Book</h1>
         {loading ? (
