@@ -41,16 +41,16 @@ const Home = () => {
           Table View
         </button>
       </div>
-      <div className="flex justify-between items-center my-4">
+      <div className="flex justify-center items-center my-4">
         <h1 className="text-3xl">Your personal booklist :)</h1>
-        <Link
-          to="/books/create"
-          className="bg-red-300 text-white px-4 py-2 rounded-lg flex items-center "
-        >
-          Add your book here
-          <MdOutlineAddBox className="text-4xl ml-2" />
-        </Link>
       </div>
+      <Link
+        to="/books/create"
+        className="bg-red-300 text-white px-2 py-4 rounded-lg flex justify-center items-center"
+      >
+        <MdOutlineAddBox className="text-4xl ml-2" />
+      </Link>
+
       {loading && (
         <div className="flex justify-center items-center my-8">
           <Spinner />
