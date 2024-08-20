@@ -1,0 +1,47 @@
+name: book_store
+
+services:    
+  mongo:
+    image: mongo:7.0.12
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+  
+  api: 
+    build:
+      context: ./back_end
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./back_end:/app
+      - /app/node_modules
+    networks:
+      - book-app
+    ports:
+      - "5555:5555"
+    depends_on:
+      - mongo
+
+  front_end:    
+    build:
+      context: ./front_end
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./front_end:/app
+      - /app/node_modules
+    networks:
+      - book-app
+    ports:
+      - "5173:5173"
+    command: npm run dev -- --host
+    depends_on:
+      - api
+
+volumes:
+  mongo_data:
+
+networks:
+  book-app:
+    driver: bridge
